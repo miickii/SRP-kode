@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 def cross_entropy_loss():
     a = np.linspace(0.01, 0.99, 99)
 
-    tab = -np.log(a) # when y = 1
+    tab = -np.log(a) # når y = 1
 
     plt.plot(a, tab)
     plt.xlabel('Forudsigelsen af sandsynligheden for den forventede kategori')
