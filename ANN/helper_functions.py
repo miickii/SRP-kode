@@ -35,7 +35,7 @@ def load_doodle_data():
         y_test = np.concatenate([y_test, np.ones(test_data.shape[0])*i])
     
     perm = np.random.permutation(x_train.shape[0])
-    # Shuffle both arrays in the same way
+    # Bland rækkefølgen af træningseksempler
     x_train = x_train[perm]
     y_train = y_train[perm]
     
@@ -47,7 +47,8 @@ def load_digit_data():
     x_train = x_train.reshape((60000, -1))
     x_test = x_test.reshape((10000, -1))
     perm = np.random.permutation(x_train.shape[0])
-    # Shuffle both arrays in the same way
+    
+    # Bland rækkefølgen af træningseksempler
     x_train = x_train[perm]
     y_train = y_train[perm]
     return x_train.T, y_train, x_test.T, y_test
